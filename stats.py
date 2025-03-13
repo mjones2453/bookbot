@@ -5,12 +5,12 @@ def get_num_words(file_contents):
     return count
 
 def get_num_char(file_contents):
-    count = 0
     letter_dict = {}
     for i in file_contents:
-        if i in letter_dict:
-            letter_dict[i] += 1
-        elif i not in letter_dict:
-            letter_dict[i] = 1
+        if i.isalpha():
+            if i in letter_dict:
+                letter_dict[i] += 1
+            else:
+                letter_dict[i] = 1
     return letter_dict
         
